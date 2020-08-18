@@ -63,7 +63,7 @@ arvore<DEstudante> * le_arquivo(const string & nome_arq) {
             if (arv == nullptr) arv = new arvore<DEstudante>(alguem);
             else arv->adiciona(alguem); // senão acrescenta-o a árvore
         }
-        cout << alguem.matricula << ": " << alguem.nome << endl;
+//        cout << alguem.matricula << ": " << alguem.nome << endl;
     }
 
     return arv;
@@ -77,7 +77,16 @@ int main(int argc, char * argv[]) {
         return 0;
     }
 
+    cout << "Altura da árvore: " << dados->altura() << endl;
+
     // apresenta ciclicamente o prompt para o usuário,
     // para que se digite uma matrícula e se faça a consulta na árvore
+    DEstudante fulano = {112233, ""};
+    try {
+        DEstudante aluno = dados->obtem(fulano);
 
+        cout << "Matrícula " << aluno.matricula << ": " << aluno.nome << endl;
+    } catch(...) {
+        cout << "Matrícula " << fulano.matricula << ": NÃO ENCONTRADA" << endl;
+    }
 }
