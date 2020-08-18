@@ -212,7 +212,7 @@ void strip(string &s) {
     }
 }
 
-vector<string> split(const string & s, const string & delim) {
+vector<string> separa(const string & s, const string & delim) {
     vector<string> v;
     if (s.empty()) return v;
 

@@ -20,7 +20,7 @@
 using namespace std;
 
 void strip(string & s);
-vector<string> split(const string & s, const string & delim=" \r\n\t");
+vector<string> separa(const string & s, const string & delim=" \r\n\t");
 
 string to_string(const string & s);
 
