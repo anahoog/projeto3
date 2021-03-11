@@ -23,6 +23,7 @@
 #include <vector>
 #include <sstream>
 #include <ctype.h>
+#include <poll.h>
 
 using namespace std;
 
@@ -151,21 +152,51 @@ vector<string> Terminal::leLinhas() {
     return l;    
 }
 
-string Terminal::leLinha() {
+string Terminal::leAlgo(bool _wait, char c) {
     char data[10240];
     int pos = 0;
-    
-    while (true) {
-        sched_yield();
-        int n = read(master, data+pos, 1);
+    int timeout = 0;
+
+    if (_wait) timeout = -1;
+
+    while (pos < 10240) {
+        pollfd fds[2];
+
+        fds[0].fd = master;
+        fds[0].events = POLLIN;
+        int n = poll(fds, 1, timeout);
+        if (n== 0) break;
+        timeout = 0; // após ler primeiro caractere ... não espera os demais
+        n = read(master, data+pos, 1);
         if (n <= 0) break;
-        if (data[pos] == '\n') {
+        if (data[pos] == c) {
             break;
         }
         pos++;
     }
     if (pos == 0) return "";
     return string(data, pos);
+}
+
+string Terminal::leAte(char c) {
+    char data[10240];
+    int pos = 0;
+    
+    while (pos < 10240) {
+        sched_yield();
+        int n = read(master, data+pos, 1);
+        if (n <= 0) break;
+        if (data[pos] == c) {
+            break;
+        }
+        pos++;
+    }
+    if (pos == 0) return "";
+    return string(data, pos);
+}
+
+string Terminal::leLinha() {
+    return leAte('\n');
 }
 
 string Terminal::lePalavra() {

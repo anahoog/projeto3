@@ -54,6 +54,8 @@ class Terminal {
   vector<string> lePalavras();
 
   string leLinha();
+  string leAlgo(bool _wait=true, char c='\n');
+  string leAte(char c);
   string lePalavra();
   
 private:

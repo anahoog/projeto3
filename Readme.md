@@ -3,7 +3,7 @@
 Um arquivo chamado "matriculas.txt" contém uma relação de números de matrícula e nome de estudantes. Cada linha desse arquivo tem este formato:
 
 ```
-numero, Nome de Uma Pessoa
+numero,Nome de Uma Pessoa
 ```
 
 Escreva um programa que leia os dados desse arquivo e os armazene em uma árvore de pesquisa binária. Em seguida, seu programa deve entrar em um loop. Em cada ciclo do loop o programa apresenta este prompt:

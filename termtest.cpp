@@ -5,6 +5,7 @@
 #include <time.h>
 #include <string>
 #include <sstream>
+#include <fstream>
 #include <algorithm>
 #include <unordered_set>
 #include <functional>
@@ -51,14 +52,58 @@ struct Result {
 
 };
 
-vector<Result> roda(const string & cmd) {
+struct Aluno {
+    string nome;
+    string matricula;
+
+    Aluno() {}
+    Aluno(const string & name, const string & m): nome(name), matricula(m) {}
+};
+
+vector<Aluno> le_matriculas(int n) {
+    vector<Aluno> l;
+    if (n == 0) return l;
+
+    ifstream arq("../matriculas.txt");
+
+    string nome, m;
+    while (getline(arq, m, ',')) {
+        getline(arq, nome);
+        l.push_back(Aluno(nome, m));
+    }
+
+    random_shuffle(l.begin(), l.end());
+    l.erase(l.begin()+n, l.end());
+
+    return l;
+}
+
+void roda(int n) {
+    string cmd = PROG;
     Terminal term(cmd);
+    auto v = le_matriculas(n);
 
-    auto res = term.leLinhas();
-    vector<Result> v;
-
-    for (auto & s: res) v.push_back(Result(s));
-    return v;
+    for (auto & aluno: v) {
+        auto prompt = term.leAlgo();
+        if (prompt != "Digite matricula>") {
+            FAIL() << "Deve ser apresentado um prompt antes de ler o número de matrícula." << endl
+                   << " Seu programa apresentou isto: " << prompt << endl;
+        }
+        term.escreva(aluno.matricula+'\n');
+        auto nome = term.leLinha();
+        strip(nome);
+        string name = "Estudante: " + aluno.nome;
+        if (nome != name) {
+            FAIL() << "Matrícula " << aluno.matricula << ", deveria mostrar " << name << endl
+                   << "Seu programa informou: " << nome << endl;
+        }
+    }
+    auto prompt = term.leAlgo();
+    term.escreva("\n");
+    auto fim = term.leAlgo();
+    if (not fim.empty()) {
+        FAIL() << "Seu programa deve terminar ao ler uma linha vazia !" << endl;
+    }
 }
 
 //bool operator!=(const vector<Result> & v1, const vector<Result> & v2) {
@@ -72,38 +117,11 @@ vector<Result> roda(const string & cmd) {
 //    return false;
 //}
 
-void verifica(int n, int k) {
-    string arq = "cat ../data/res"+to_string(n)+"_"+to_string(k)+".txt";
-    string arqres = PROG;
-    arqres += " ../data/arq"+to_string(n)+".txt " + to_string(k);
-
-    try {
-        auto v = roda(arq);
-        auto res = roda(arqres);
-
-        if (v != res) {
-//        sort(v.begin(), v.end());
-//        sort(res.begin(), res.end());
-            FAIL() << "Esperado: " << v2str(v, ", ") << endl
-                   << "Obtido: " << v2str(res, ", ");
-        }
-    } catch (string s) {
-        FAIL() << "Exceção ao ler isto dos seus resultados: " << s;
-    }
+TEST(TermTest, Geral) {
+    for (int j=0; j < 10; j++) roda(1+(rand() % 7));
 }
 
-TEST(TermTest, Arquivo1) {
-    verifica(1, 7);
-    verifica(1, 8);
+TEST(TermTest, Nada) {
+    roda(0);
 }
 
-TEST(TermTest, Arquivo2) {
-    verifica(2, 3);
-    verifica(2, 5);
-}
-
-TEST(TermTest, Arquivo3) {
-    verifica(3, 5);
-    verifica(3, 7);
-    verifica(3, 10);
-}
