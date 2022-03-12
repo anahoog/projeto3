@@ -61,40 +61,31 @@ namespace splay {
             Nodo<T> *atual = arv.raiz;
             bool teste = true;
 
-            while (teste) {
+            while (true) {
                 //passo 1: Se o dado procurado for igual ao dado contido no nodo atual, sobrescreve o dado do nodo atual e encerra a inserção
-                if (atual->dado == algo) {
+                if (algo == atual->dado) {
                     arv.raiz->dado = algo;
                     return;
                 }
-
-                //passo 2: Se o dado for menor que o do nodo atual, o nodo atual passa a ser o nodo da esquerda (caso exista), e volta ao passo 1.
                 if (algo < atual->dado) {
                     if (atual->esq != nullptr) {
                         atual = atual->esq;
                     }
-                        // * Se nodo esquerdo não existir, cria um novo nodo com o nodo dado e conecta-o à esquerda do nodo atual, encerrando a inserção.
                     else {
                         atual->esq = cria_nodo(algo);
                         atual->esq->pai = atual;
-                        teste = false;
                         move_para_raiz(arv,atual);
                         return;
                     }
                 }
-
-                //Se o dado for maior que o do nodo atual, o nodo atual passa a ser o nodo da direita (caso exista), e volta ao passo 1.
-                if (algo > atual->dado) {
+                else {
                     if (atual->dir != nullptr) {
                         atual = atual->dir;
                     }
-                        //Se nodo direito não existir, cria um novo nodo com o nodo dado e conecta-o à direita do nodo atual, encerrando a inserção.
                     else {
                         atual->dir = cria_nodo(algo);
                         atual->dir->pai = atual;
-                        move_para_raiz(arv,atual);
-
-                        teste = false;
+                       move_para_raiz(arv,atual);
                         return;
                     }
 
@@ -143,7 +134,6 @@ namespace splay {
                     zag(nodo);
                 }
             }
-
             // 2. Senão:
             else{
                     // 2.1 Se for caso zigzig faça a transformação zig no pai do nodo, e depois no nodo

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/anahoog/Documentos/Arvore_ConsultarDados/main.cpp" "CMakeFiles/Prog.dir/main.cpp.o" "gcc" "CMakeFiles/Prog.dir/main.cpp.o.d"
+  "/home/anahoog/CLionProjects/projeto3/main.cpp" "CMakeFiles/Prog.dir/main.cpp.o" "gcc" "CMakeFiles/Prog.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.

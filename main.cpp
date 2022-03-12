@@ -61,8 +61,19 @@ void teste_splay(){
 }
 
 struct itens {
-    string matricula;
+    int matricula;
     string nome;
+    bool operator<(const itens &algo){
+        if(matricula<algo.matricula){
+            return true;
+        }
+    }
+};
+
+bool operator < (const itens & algo, const itens & atual){
+    if(algo.matricula < atual.matricula){
+        return true;
+    }return false;
 };
 
 itens separa(const string & linha){
@@ -77,7 +88,7 @@ itens separa(const string & linha){
         if (pos_sep != string::npos) {
             if (pos == 0) {
                 aux = linha.substr(pos, pos_sep - pos);
-                varSepara.matricula = aux;
+                varSepara.matricula = stoi(aux);
                 aux = linha.substr(pos_sep+1);
                 varSepara.nome = aux;
             }
@@ -85,6 +96,9 @@ itens separa(const string & linha){
     }
     return varSepara;
 }
+bool operator == (const itens & este, const itens & aquele){
+    return este.matricula == aquele.matricula;
+};
 
 
 int main() {
@@ -94,20 +108,17 @@ int main() {
     ifstream arq ("../matriculas.txt");
     string linha;
     itens obj;
-    unordered_map <string,string> tab;
 
-    Splay<unordered_map<string,string>> arv = cria_splay <unordered_map<string,string>> ();
+    Splay<itens> arv = cria_splay <itens> ();
+    Splay<int> teste = cria_splay<int>();
     if (!arq.is_open()) {
         cout<<"arquivo invalido"<< endl;
         return 0;
     }
     while (getline(arq, linha)) {
-        //obj = separa(linha);
-        obj.matricula = "1111";
-        obj.nome = "ana";
-        tab.insert(obj.matricula,obj.nome);
-        splay_adiciona(arv,tab);
-
+        obj = separa(linha);
+       splay_adiciona(arv,obj);
+        splay_adiciona(teste,obj.matricula);
     }
 
 

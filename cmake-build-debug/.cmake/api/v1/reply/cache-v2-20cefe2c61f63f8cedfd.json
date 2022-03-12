@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug"
+			"value" : "/home/anahoog/CLionProjects/projeto3/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -727,7 +727,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/anahoog/Documentos/Arvore_ConsultarDados"
+			"value" : "/home/anahoog/CLionProjects/projeto3"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1395,7 +1395,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug"
+			"value" : "/home/anahoog/CLionProjects/projeto3/cmake-build-debug"
 		},
 		{
 			"name" : "Prog_IS_TOP_LEVEL",
@@ -1419,7 +1419,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/anahoog/Documentos/Arvore_ConsultarDados"
+			"value" : "/home/anahoog/CLionProjects/projeto3"
 		},
 		{
 			"name" : "gtest_BINARY_DIR",
@@ -1431,7 +1431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest"
+			"value" : "/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest"
 		},
 		{
 			"name" : "gtest_IS_TOP_LEVEL",
@@ -1455,7 +1455,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/anahoog/Documentos/Arvore_ConsultarDados/googletest"
+			"value" : "/home/anahoog/CLionProjects/projeto3/googletest"
 		},
 		{
 			"name" : "gtest_build_samples",

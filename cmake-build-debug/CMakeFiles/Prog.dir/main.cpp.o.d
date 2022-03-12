@@ -1,6 +1,6 @@
 CMakeFiles/Prog.dir/main.cpp.o: \
- /home/anahoog/Documentos/Arvore_ConsultarDados/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/9/iostream \
+ /home/anahoog/CLionProjects/projeto3/main.cpp /usr/include/stdc-predef.h \
+ /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -136,12 +136,12 @@ CMakeFiles/Prog.dir/main.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
- /home/anahoog/Documentos/Arvore_ConsultarDados/splay.h \
- /home/anahoog/Documentos/Arvore_ConsultarDados/splay-impl.h \
- /home/anahoog/Documentos/Arvore_ConsultarDados/interface.h \
- /home/anahoog/Documentos/Arvore_ConsultarDados/./prglib.h \
- /home/anahoog/Documentos/Arvore_ConsultarDados/./libs/arvore.h \
- /home/anahoog/Documentos/Arvore_ConsultarDados/./libs/BasicTree.h \
+ /home/anahoog/CLionProjects/projeto3/splay.h \
+ /home/anahoog/CLionProjects/projeto3/splay-impl.h \
+ /home/anahoog/CLionProjects/projeto3/interface.h \
+ /home/anahoog/CLionProjects/projeto3/./prglib.h \
+ /home/anahoog/CLionProjects/projeto3/./libs/arvore.h \
+ /home/anahoog/CLionProjects/projeto3/./libs/BasicTree.h \
  /usr/include/c++/9/list /usr/include/c++/9/bits/stl_list.h \
  /usr/include/c++/9/bits/allocated_ptr.h \
  /usr/include/c++/9/ext/aligned_buffer.h /usr/include/c++/9/bits/list.tcc \
@@ -168,7 +168,7 @@ CMakeFiles/Prog.dir/main.cpp.o: \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
  /usr/include/c++/9/bits/stl_heap.h /usr/include/c++/9/bits/stl_queue.h \
- /home/anahoog/Documentos/Arvore_ConsultarDados/./libs/arvore-impl.h \
+ /home/anahoog/CLionProjects/projeto3/./libs/arvore-impl.h \
  /usr/include/c++/9/sstream /usr/include/c++/9/bits/sstream.tcc \
  /usr/include/c++/9/fstream /usr/include/c++/9/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \

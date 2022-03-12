@@ -65,17 +65,17 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/anahoog/Documentos/Arvore_ConsultarDados/."
+					"path" : "/home/anahoog/CLionProjects/projeto3/."
 				},
 				{
 					"backtrace" : 4,
 					"isSystem" : true,
-					"path" : "/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/include"
+					"path" : "/home/anahoog/CLionProjects/projeto3/googletest/include"
 				},
 				{
 					"backtrace" : 4,
 					"isSystem" : true,
-					"path" : "/home/anahoog/Documentos/Arvore_ConsultarDados/googletest"
+					"path" : "/home/anahoog/CLionProjects/projeto3/googletest"
 				}
 			],
 			"language" : "CXX",

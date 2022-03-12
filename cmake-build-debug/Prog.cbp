@@ -8,35 +8,35 @@
 		<Option virtualFolders="CMake Files\;CMake Files\googletest\;CMake Files\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug"/>
+				<Option working_dir="/home/anahoog/CLionProjects/projeto3/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug"/>
+				<Option working_dir="/home/anahoog/CLionProjects/projeto3/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runTerm">
-				<Option output="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/runTerm" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug"/>
+				<Option output="/home/anahoog/CLionProjects/projeto3/cmake-build-debug/runTerm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anahoog/CLionProjects/projeto3/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/."/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/include"/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/."/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest/include"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -46,22 +46,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 runTerm"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 runTerm"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runTerm/fast">
-				<Option output="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/runTerm" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug"/>
+				<Option output="/home/anahoog/CLionProjects/projeto3/cmake-build-debug/runTerm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anahoog/CLionProjects/projeto3/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/."/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/include"/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/."/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest/include"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -71,32 +71,32 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 runTerm/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 runTerm/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug"/>
+				<Option working_dir="/home/anahoog/CLionProjects/projeto3/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Prog">
-				<Option output="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Prog" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug"/>
+				<Option output="/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Prog" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anahoog/CLionProjects/projeto3/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/."/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/include"/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/."/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest/include"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -106,22 +106,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 Prog"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 Prog"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Prog/fast">
-				<Option output="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Prog" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug"/>
+				<Option output="/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Prog" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anahoog/CLionProjects/projeto3/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/."/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/include"/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/."/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest/include"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -131,22 +131,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 Prog/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 Prog/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest"/>
+				<Option output="/home/anahoog/CLionProjects/projeto3/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/."/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/include"/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/."/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest/include"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -156,22 +156,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest"/>
+				<Option output="/home/anahoog/CLionProjects/projeto3/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/."/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/include"/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/."/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest/include"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -181,22 +181,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest"/>
+				<Option output="/home/anahoog/CLionProjects/projeto3/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/."/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/include"/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/."/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest/include"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -206,22 +206,22 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest"/>
+				<Option output="/home/anahoog/CLionProjects/projeto3/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/."/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/include"/>
-					<Add directory="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/."/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest/include"/>
+					<Add directory="/home/anahoog/CLionProjects/projeto3/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -231,44 +231,44 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/Documentos/Arvore_ConsultarDados/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/anahoog/Documentos/Arvore_ConsultarDados/Terminal.cpp">
+		<Unit filename="/home/anahoog/CLionProjects/projeto3/Terminal.cpp">
 			<Option target="runTerm"/>
 		</Unit>
-		<Unit filename="/home/anahoog/Documentos/Arvore_ConsultarDados/Terminal.h">
+		<Unit filename="/home/anahoog/CLionProjects/projeto3/Terminal.h">
 			<Option target="runTerm"/>
 		</Unit>
-		<Unit filename="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/src/gtest-all.cc">
+		<Unit filename="/home/anahoog/CLionProjects/projeto3/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/src/gtest_main.cc">
+		<Unit filename="/home/anahoog/CLionProjects/projeto3/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/anahoog/Documentos/Arvore_ConsultarDados/interface.cpp">
+		<Unit filename="/home/anahoog/CLionProjects/projeto3/interface.cpp">
 			<Option target="runTerm"/>
 		</Unit>
-		<Unit filename="/home/anahoog/Documentos/Arvore_ConsultarDados/interface.h">
+		<Unit filename="/home/anahoog/CLionProjects/projeto3/interface.h">
 			<Option target="runTerm"/>
 		</Unit>
-		<Unit filename="/home/anahoog/Documentos/Arvore_ConsultarDados/main.cpp">
+		<Unit filename="/home/anahoog/CLionProjects/projeto3/main.cpp">
 			<Option target="Prog"/>
 		</Unit>
-		<Unit filename="/home/anahoog/Documentos/Arvore_ConsultarDados/termtest.cpp">
+		<Unit filename="/home/anahoog/CLionProjects/projeto3/termtest.cpp">
 			<Option target="runTerm"/>
 		</Unit>
-		<Unit filename="/home/anahoog/Documentos/Arvore_ConsultarDados/CMakeLists.txt">
+		<Unit filename="/home/anahoog/CLionProjects/projeto3/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/CMakeLists.txt">
+		<Unit filename="/home/anahoog/CLionProjects/projeto3/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\googletest\"/>
 		</Unit>
-		<Unit filename="/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/home/anahoog/CLionProjects/projeto3/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\googletest\cmake\"/>
 		</Unit>
 	</Project>

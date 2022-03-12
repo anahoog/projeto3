@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/anahoog/Documentos/Arvore_ConsultarDados/. -I/home/anahoog/Documentos/Arvore_ConsultarDados/googletest/include -I/home/anahoog/Documentos/Arvore_ConsultarDados/googletest
+CXX_INCLUDES = -I/home/anahoog/CLionProjects/projeto3/. -I/home/anahoog/CLionProjects/projeto3/googletest/include -I/home/anahoog/CLionProjects/projeto3/googletest
 
 CXX_FLAGS = -g -std=gnu++14
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/anahoog/Documentos/Arvore_ConsultarDados/googletest
+# Install script for directory: /home/anahoog/CLionProjects/projeto3/googletest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
