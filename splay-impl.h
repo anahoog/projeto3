@@ -102,15 +102,14 @@ namespace splay {
         while (dado_atual != nullptr) {
 
             if (dado_atual->dado == algo) {
+                move_para_raiz(arv,dado_atual);
                 return dado_atual->dado;
             }
             if (algo < dado_atual->dado) {
                 dado_atual = dado_atual->esq;
-                zig(dado_atual);
             }
             else {
                 dado_atual = dado_atual->dir;
-                zag(dado_atual);
             }
         }//std::cout<<"dado inexistente"<<std::endl;
     }
@@ -195,43 +194,51 @@ namespace splay {
         return nodoB;
     }
 
-    template <typename T> Nodo<T> * zag (Nodo <T> * nodoA) {
-        Nodo<T> * nodoB = nodoA->pai;
-        Nodo<T> * sub2=nullptr, * up;
+    template <typename T> Nodo<T>* zag(Nodo<T> * nodoA) {
+        Nodo<T> *nodoB, *sub2=nullptr, *up;
+        // nodoB é a raiz desta subárvore
+        nodoB = nodoA->pai;
+        // up é o nodo pai da raiz desta subárvore
         up = nodoB->pai;
 
-        sub2 = nodoA->dir;
-
+        // atualiza o nodo pai do nodoA (nova raiz):
+        // o nodo pai da nova raiz deve ser o mesmo
+        // nodo pai da raiz anterior
         nodoA->pai = up;
-        if(up!= nullptr){
-            if (na_esquerda(nodoB)) {
-                up->esq = nodoA;
-            }
-            else {
-                up->dir = nodoA;
-            }
+        if (up != nullptr) {
+            if (na_esquerda(nodoB)) up->esq = nodoA;
+            else up->dir = nodoA;
         }
+        // sub2 é a subárvore à esquerda do nodoA
+        sub2 = nodoA->esq;
 
-        nodoB->dir = sub2;
-
-        if (sub2 != nullptr){
-            sub2->pai = nodoB;
-        }
-        nodoA->dir = nodoB;
+        // faz a transformação: nodoA se torna nova raiz,
+        // e nodoB é conectado à sua esquerda
+        nodoA->esq = nodoB;
         nodoB->pai = nodoA;
 
-        return nodoA;
+        // sub2 é conectada à direita de nodoB
+        nodoB->dir = sub2;
+        if (sub2 != nullptr) sub2->pai = nodoB;
 
+        // retorna a nova raiz ... não tem serventia, mas
+        // como originalmente se pensou que zag deveria retorná-la,
+        // mantive por coerência
+        return nodoA;
     }
 
     /*--------------------Testes------------------------------*/
 
-    template <typename T> bool na_esquerda (Nodo <T> * nodo){
-        return nodo->pai->esq==nodo;
+    template <typename T> bool na_esquerda(Nodo<T> * nodo) {
+        Nodo<T> *pai = nodo->pai;
+
+        return pai->esq == nodo;
     }
 
     template <typename T> bool na_direita (Nodo <T> * nodo){
-        return nodo->pai->dir==nodo;
+        Nodo<T> *pai = nodo->pai;
+
+        return pai->dir == nodo;
     }
 
     template <typename T> bool testa_zigzig (Nodo <T> *nodo){
