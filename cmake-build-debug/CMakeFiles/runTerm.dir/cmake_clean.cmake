@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/runTerm.dir/Terminal.cpp.o"
   "CMakeFiles/runTerm.dir/Terminal.cpp.o.d"
-  "CMakeFiles/runTerm.dir/interface.cpp.o"
-  "CMakeFiles/runTerm.dir/interface.cpp.o.d"
   "CMakeFiles/runTerm.dir/termtest.cpp.o"
   "CMakeFiles/runTerm.dir/termtest.cpp.o.d"
   "runTerm"

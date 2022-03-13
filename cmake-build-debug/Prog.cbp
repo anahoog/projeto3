@@ -250,12 +250,6 @@
 		<Unit filename="/home/anahoog/CLionProjects/projeto3/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/anahoog/CLionProjects/projeto3/interface.cpp">
-			<Option target="runTerm"/>
-		</Unit>
-		<Unit filename="/home/anahoog/CLionProjects/projeto3/interface.h">
-			<Option target="runTerm"/>
-		</Unit>
 		<Unit filename="/home/anahoog/CLionProjects/projeto3/main.cpp">
 			<Option target="Prog"/>
 		</Unit>

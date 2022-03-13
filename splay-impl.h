@@ -4,10 +4,10 @@
 
 namespace splay {
 
+    //Função Cria o nodo: Recebe o tipo de variável e o dado que deseja adicionar em um nodo;
     template <typename T> Nodo <T> * cria_nodo(const T & algo) {
-        Nodo<T> *novo;
-        novo = new Nodo<T>;
-
+        Nodo <T> * novo;
+        novo = new Nodo <T>;
         novo->dado = algo;
         novo->esq = nullptr;
         novo->dir = nullptr;
@@ -16,6 +16,7 @@ namespace splay {
         return novo;
     }
 
+    //Função cria_splay: Cria uma arvore de acordo com o tipo de variável fornecido;
     template <typename T> Splay <T> cria_splay() {
         Splay<T> arv;
         arv.raiz = nullptr;
@@ -23,78 +24,98 @@ namespace splay {
         return arv;
     }
 
+    //Retorna true se a raiz da avore criada não possui dado, sendo considerada uma arvore vazia;
     template <typename T> bool splay_vazia (Splay <T> & arv) {
         return arv.raiz == nullptr;
     }
 
-
+    //Função altura (uso privativo): Determina a altura da avore de acordo com qual lado dos nodos é o maior;
     template <typename T> int altura (Nodo <T> * nodo){
+
+        //Se os dois lados do nodo estiverem apontando para nullpointer, a altura da arvore é 0;
         if (nodo->esq == nullptr && nodo->dir == nullptr) return 0;
 
         int altura_esq = 0, altura_dir = 0;
 
+        //Contador de nodos do lado esquerdo da arvore;
         if (nodo->esq != nullptr) {
             altura_esq = 1 + altura(nodo->esq);
         }
 
+        //Contador de nodos do lado direito da arvore;
         if (nodo->dir != nullptr){
             altura_dir = 1 + altura(nodo->dir);
         }
 
+        //Determina qual dos dois lados é o maior e retorna seu valor. O maior valor é a altura da avore.
         if (altura_esq > altura_dir){
             return altura_esq;
         }
         return altura_dir;
     }
 
-
+    //Uso Futuro - Função Incompleta
     template <typename T> int fator_balanceamento (Nodo <T> * nodo){
 
 
     }
 
-
+    //Função splay_adiciona: Recebe como parâmetro o nome da arvore e o dado que deseja adicionar na arvore;
     template <typename T> void splay_adiciona (Splay <T> & arv, const T & algo){
 
+        //Se a avore estiver vazia, cria-se um nodo e adiciona na raiz da arvore;
         if (splay_vazia(arv)) {
             arv.raiz = cria_nodo(algo);
-        }else {
+        }
+        //Caso a arvore não esteja vazia, usa-se a raiz como referência para localizar a posição inicial;
+        else {
             Nodo<T> * atual = arv.raiz;
 
             while (true) {
-                //passo 1: Se o dado procurado for igual ao dado contido no nodo atual, sobrescreve o dado do nodo atual e encerra a inserção
+                //Se o dado que deseja adicionar na arvore já existe, sobrescreve o dado do nodo atual e encerra a inserção
                 if (algo == atual->dado) {
                     atual->dado = algo;
                     return;
                 }
+                //Se o dado a ser adicionado é menor que o dado atual;
                 if (algo < atual->dado) {
+
+                    //Se o dado á esquerda do nodo atual não estiver vazio, obtém o próximo nodo à esquerda dele.
                     if (atual->esq != nullptr) {
                         atual = atual->esq;
-                    }else {
+                    }
+                    //Caso o nodo à esquerda do nodo atual esteja vazio, cria-se um nodo com o dado fornecido e adiciona à esquerda
+                    //do nodo atual e insere o nodo pai com o valor do nodo atual;
+                    else {
                         atual->esq = cria_nodo(algo);
                         atual->esq->pai = atual;
+
+                        //atualiza o nodo raiz com o nodo atual;
                         move_para_raiz(arv,atual);
+
                         return;
                     }
-                }else {
+                }
+                //Caso o dado não seja igual ou menor que o dado do nodo atual, ele é maior que o dado do nodo atual.
+                //Logo, procura-se o nodo que possua o nodo à direita vazia para então adicionar o dado em um novo nodo e
+                // este ser o nodo à direita do nodo atual.
+                else {
                     if (atual->dir != nullptr) {
                         atual = atual->dir;
-                    }
-                    else {
+                    }else {
                         atual->dir = cria_nodo(algo);
                         atual->dir->pai = atual;
+
+                        //atualiza o nodo raiz com o nodo atual;
                         move_para_raiz(arv,atual);
                         return;
                     }
-
                 }
-
             }
         }
-
     }
 
-
+    //Função splay_acessa_dado: Recebe como parâmetro o nome da arvore e o dado que deseja localizar na arvore e o torna a raiz da árvore;
     template <typename T> T splay_acessa_dado (Splay <T> & arv, const T & algo) {
 
         Nodo <T> * dado_atual = arv.raiz;
@@ -111,69 +132,95 @@ namespace splay {
             else {
                 dado_atual = dado_atual->dir;
             }
-        }//std::cout<<"dado inexistente"<<std::endl;
+        }
     }
 
-
+    //Função move_para_raiz: Recebe como parâmetro a avore que terá a raiz atualizada e qual nodo será utilizado;
     template <typename T> void move_para_raiz (Splay <T> & arv, Nodo <T> * nodo) {
 
-        // Enquanto nodo não estiver na raiz FAÇA
+        // Enquanto nodo informado não estiver na raiz, repita o processo;
         while (nodo->pai != nullptr) {
-            // 1. Se pai do nodo for a raiz, faça uma transformação simples: Zig ou zag
+
+            //Se o nodo que é o pai do nodo atual for a raiz:
+            //Faça uma transformação simples do tipo Zig ou Zag
             if(nodo->pai->pai == nullptr) {
-                //se nodo esquerda, faça zig
+
+                //Se nodo atual está à esquerda, chame a função zig;
                 if (na_esquerda(nodo)) {
                     zig(nodo);
                 }
-                //se não zag
+
+                //Se o nodo estiver à direita, chame a função zag;
                 else {
                     zag(nodo);
                 }
             }
-            // 2. Senão:
+
+            // Se ele não for o nodo raiz
             else{
-                    // 2.1 Se for caso zigzig faça a transformação zig no pai do nodo, e depois no nodo
+                    //Chame a função testa_zigzig indicando que o nodo e o pai do nodo estão à esquerda
                     if (testa_zigzig(nodo)) {
+                        //faça a transformação zig no nodo pai;
                         zig(nodo->pai);
+
+                        //Chame a função zig no nodo atual;
                         zig(nodo);
                     }
 
-                    // 2.2 Se for caso zigzag faça a transformação zig e depois zag no nodo
+                    //Se não for zigzig, chame a função testa_zigzag, indicando que o nodo está à esquerda e o pai do nodo à direita;
                     else if (testa_zigzag(nodo)) {
+
+                        //Faça zig no nodo;
                         zig(nodo);
+
+                        //Faça zag no nodo;
                         zag(nodo);
                     }
 
-                    // 2.3 Se for caso zagzig faça a transformação zag e depois zig no nodo
+                    //Se não for zigzag, chame a função testa_zagzig, indicando que o nodo está à direita e o pai do nodo à esquerda;
                     else if (testa_zagzig(nodo)) {
+
+                        //Faça zag no nodo;
                         zag(nodo);
+
+                        //Faça zig no nodo;
                         zig(nodo);
                     }
 
-                    // 2.4 Se for caso zagzag faça a transformação zag no pai do nodo, e depois no nodo
+                    //Chame a função testa_zagzag indicando que o nodo e o pai do nodo estão à direita
                     else if (testa_zagzag(nodo)) {
+
+                        //faça a transformação zag no nodo pai;
                         zag(nodo->pai);
+
+                        //Chame a função zag no nodo atual;
                         zag(nodo);
                     }
 
             }
         }
-
         // Ao sair do laço, atualiza a raiz da árvore com "nodo"
         arv.raiz = nodo;
     }
 
-
-    /*-----------------------ZigZag-----------------------*/
-
+    //Função zig: muda a posição do nodo informado que está à esquerda do nodo pai;
     template <typename T> Nodo <T> * zig (Nodo <T> * nodoB){
+
+        //O nodoA recebe o nodo que é o pai do nodoB;
         Nodo<T> * nodoA = nodoB->pai;
+
+        //O sub2 recebe nullptr inicialmente e criamos uma variável para obter o nodo pai;
         Nodo<T> * sub2=nullptr, * up;
+
+        //up recebe o nodo pai do nodoA, que era o nodo pai do nodo pai;
         up = nodoA->pai;
 
+        //sub2 recebe o nodo à direita do nodoB;
         sub2 = nodoB->dir;
 
+        //o nodo pai do nodoB recebe o nodo pai do nodoA;
         nodoB->pai = up;
+
         if(up!= nullptr){
             if (na_esquerda(nodoA)) {
                 up->esq = nodoB;
@@ -194,6 +241,7 @@ namespace splay {
         return nodoB;
     }
 
+    //Função zag: muda a posição do nodo informado que está à direita do nodo pai;
     template <typename T> Nodo<T>* zag(Nodo<T> * nodoA) {
         Nodo<T> *nodoB, *sub2=nullptr, *up;
         // nodoB é a raiz desta subárvore
@@ -227,37 +275,42 @@ namespace splay {
         return nodoA;
     }
 
-    /*--------------------Testes------------------------------*/
-
+    //Retorna true se o nodo informado está à esquerda do nodo pai;
     template <typename T> bool na_esquerda(Nodo<T> * nodo) {
         Nodo<T> *pai = nodo->pai;
 
         return pai->esq == nodo;
     }
 
+    //Retorna true se o nodo informado está à direita do nodo pai;
     template <typename T> bool na_direita (Nodo <T> * nodo){
         Nodo<T> *pai = nodo->pai;
 
         return pai->dir == nodo;
     }
 
+    //Retorna true se o nodo informado está à esquerda do nodo pai e a esquerda do nodo do nodo pai;;
     template <typename T> bool testa_zigzig (Nodo <T> *nodo){
         return (na_esquerda(nodo) && na_esquerda(nodo->pai));
     }
 
+    //Retorna true se o nodo informado está à esquerda do nodo pai e a direita do nodo do nodo pai;;
     template <typename T> bool testa_zigzag (Nodo <T> *nodo){
         return (na_esquerda(nodo) && na_direita(nodo->pai));
     }
 
+    //Retorna true se o nodo informado está à direita do nodo pai e a esquerda do nodo do nodo pai;;
     template <typename T> bool testa_zagzig (Nodo <T> *nodo){
         return (na_direita(nodo) && na_esquerda(nodo->pai));
     }
 
+    //Retorna true se o nodo informado está à direita do nodo pai e a direita do nodo do nodo pai;;
     template <typename T> bool testa_zagzag (Nodo <T> *nodo){
         return(na_direita(nodo) && na_direita(nodo->pai));
     }
 
-    template <typename T> T altura_arv (Splay <T> & arv){
+    //Função altura_arv: Chama a função privada "altura" e retorna a altura da arvore;
+    template <typename T> int altura_arv (Splay <T> & arv){
         Nodo <T> * dado_atual = arv.raiz;
         int a = altura(dado_atual);
         return  a;

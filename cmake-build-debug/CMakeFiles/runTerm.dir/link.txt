@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/runTerm.dir/termtest.cpp.o CMakeFiles/runTerm.dir/Terminal.cpp.o CMakeFiles/runTerm.dir/interface.cpp.o -o runTerm  lib/libgtestd.a lib/libgtest_maind.a -lutil lib/libgtestd.a -lpthread 
+/usr/bin/c++ -g CMakeFiles/runTerm.dir/termtest.cpp.o CMakeFiles/runTerm.dir/Terminal.cpp.o -o runTerm  lib/libgtestd.a lib/libgtest_maind.a -lutil lib/libgtestd.a -lpthread 

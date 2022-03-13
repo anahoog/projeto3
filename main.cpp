@@ -1,15 +1,12 @@
 #include <iostream>
 #include <string>
-#include <iostream>
 #include "splay.h"
-#include "interface.h"
 #include <fstream>
-#include <prglib.h>
-#include <unordered_map>
 
 using namespace splay;
 using namespace std;
 
+//Função de Teste do programa
 void teste_splay(){
     cout<<"-------------------------------------------------------"<<endl;
     cout<<" "<<endl;
@@ -60,6 +57,7 @@ void teste_splay(){
 
 }
 
+//Estrutura de Dados para classificação de dados em Matricula e Nome do aluno;
 struct dados {
     int matricula;
     string nome;
@@ -70,12 +68,8 @@ struct dados {
     }
 };
 
-bool operator < (const dados & algo, const dados & atual){
-    if(algo.matricula < atual.matricula){
-        return true;
-    }return false;
-};
-
+//Função Separa, onde recebe uma string e separa os dados de acordo com o delimitador da frase;
+//Retorna uma variável do tipo dados, contendo a matricula e nome do aluno;
 dados separa_str(const string & linha){
 
     string aux;
@@ -97,48 +91,103 @@ dados separa_str(const string & linha){
     return varSepara;
 }
 
+
+//Determinação do operador em relação ao dado "matricula";
+bool operator < (const dados & algo, const dados & atual){
+    if(algo.matricula < atual.matricula){
+        return true;
+    }return false;
+};
+
+//Determinação do operador em relação ao dado "matricula";
 bool operator == (const dados & esta, const dados & aquela){
     return esta.matricula == aquela.matricula;
 };
 
+//Exercicio do projeto;
+int consulta_splay(){
+    /*Primeiro critério:
+    * Escreva um programa que leia os dados desse arquivo e os armazene em uma árvore de pesquisa binária.
+    */
 
-int main() {
-
-    //teste_splay();
+    //Inicialmente o programa carrega o arquivo utilizado para consulta
     ifstream arquivo ("../matriculas.txt");
-    string linha;
-    dados aluno;
 
-    Splay<dados> arv = cria_splay <dados> ();
-
+    //Caso não seja possível abrir o arquivo, retorna mensagem de erro e encerra o programa.
     if (!arquivo.is_open()) {
         cout<<"arquivo invalido"<< endl;
         return 0;
     }
 
+    //Criação de uma arvore splay do tipo dados, uma estrutura com as informações de matricula e nome de aluno;
+    Splay<dados> arv = cria_splay <dados> ();
+
+   //Variável utilizada para armazenar a linha do arqivo;
+    string linha;
+
+    //Variável do tipo "dados"(matricula e nome) que receberá o retorno da função "separa_str";
+    dados aluno;
+
+    //Enquanto for possível obter uma linha do arquivo, chama-se a função "separa_str" que retornará a matricula e o nome do aluno.
+    //O resultado da função separa_str é salvo na variável "aluno" e em seguia, é chamada a função "splay_adiciona", no qual é necessário
+    // informar qual arvore será utilizada e qual dado será armazenado;
     while (getline(arquivo, linha)) {
         aluno = separa_str(linha);
         splay_adiciona(arv,aluno);
     }
-    string aux;
 
+    /*Segundo crtério do exercicio: programa deve entrar em um loop.
+     * Em cada ciclo do loop o programa apresenta este prompt:
+     * Digite matricula>
+     */
+
+    //Laço de repetição;
     while(true){
-        cout << "Digite matricula: ";
+
+        //Variável para obter a entrada de dados do teclado;
+        string aux;
+
+        //Requisito do exercicio:
+        cout << "Digite matricula>";
+
+        //obter a entrada de dados do teclado e armazenar na variável;
         getline(cin, aux);
-        if (aux.empty()){
-            break;
-        }
+
+        /*Requisito do exercicio:
+        *Se for teclado "ENTER", o programa termina.
+        */
+        if (aux.empty())break;
+
+        //Variável com estrutura matricula e nome para ser utilizada na função "splay_acessa_dado";
         dados buscar;
+
+        //A entrada de dados será convertida de string para inteiro;
         buscar.matricula = stoi(aux);
-        auto obtido = splay_acessa_dado(arv,buscar);
+
+        //Chama-se a função de acesso à arvore, informando o nome da arvore e o dado necessário.
+        //Se a matricula for encotrada, o programa retorna o dado com matricula e nome;
+        //Se a matricula não existir, o campo buscar.nome fica em branco e transferido para a variável obtido;
+        //Se fosse reaproveitar a variável "buscar", o programa retorna valor incorreto. Ex: digitei a matricula 1 e o programa retornou 0
+        dados obtido = splay_acessa_dado(arv,buscar);
+
+        //Se o valor contido na variável "obtio.nome" não estiver em branco, o programa apresenta na tela
+        // "Estudante: Um Nome de Um Estudante"
         if(obtido.nome!=""){
             cout<<"Estudante: "<<obtido.nome<<endl;
-        }else{
+        }
+        /*Requisito do exercicio:
+        *Se uma matrícula desconhecida for digitada, seu programa deve apresentar esta mensagem:
+        *Matricula MATRICULA_DIGITADA desconhecida
+        */
+        else{
             cout<<"Matricula "<<buscar.matricula<<" desconhecida"<<endl;
         }
     }
-
-
-    return 0;
 }
 
+int main() {
+
+    //Para Testar o programa, remover as barras da função teste_splay();
+    //teste_splay();
+    consulta_splay();
+}

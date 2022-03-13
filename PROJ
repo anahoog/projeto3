@@ -1,41 +1,30 @@
-Projeto 3: usando a árvore Splay
-Na unidade 2, estudamos árvores de pesquisa binária. Ali se usou uma árvore previamente disponibilizada para a
-realização de experimentos e exercícios. Para a avaliação da unidade 3, usem sua árvore Splay para resolver o seguinte
-exercício sobre consulta em árvore. Em sua realização, demonstrem que sua cada novo dado acessado é movido de fato para
-a raiz, e nenhum outro dado se perde na árvore.
+Projeto 3: usando a árvore splay
+Na unidade 2, estudamos árvores de pesquisa binária. Ali se usou uma árvore previamente disponibilizada para a realização de experimentos e exercícios. Para a avaliação da unidade 3, usem sua árvore Splay para resolver o seguinte exercício sobre consulta em árvore. Em sua realização, demonstrem que sua cada novo dado acessado é movido de fato para a raiz, e nenhum outro dado se perde na árvore.
 
 O que entregar
+Gere um arquivo compactado contendo o seguinte:
+
 O código-fonte do programa, o qual deve estar comentado
 Um video que mostre o funcionamento desse programa, o qual deve conter:
 Uma execução com os testes automáticos
-Uma execução com seus testes feitos manualmente no programa com consultas para dados que existam e para dados que não
-existam na árvore
+Uma execução com seus testes feitos manualmente no programa com consultas para dados que existam e para dados que não existam na árvore
 Uma demonstração de que cada consulta a um dado faz com que o respectivo nodo seja de fato movido para a raiz
-O código-fonte de uma versão modificada do programa que testa o acesso a todas as matrículas que foram adicionadas a
-sua árvore.
+O código-fonte de uma versão modificada do programa que testa o acesso a todas as matrículas que foram adicionadas a sua árvore.
 Um outro video que mostre o funcionamento do programa modificado:
 Para cada matrícula acessada, mostre que o respectivo nodo foi trazido para a raiz.
 Descrição do exercício
-O arquivo de projeto CLion fornecido para a resolução do exercício contém um testador automático. Ele testa se as
-consultas fornecem nos resultados esperados, mas não demonstram se o dado obtido foi movido para a raiz.
+O arquivo de projeto CLion fornecido para a resolução do exercício contém um testador automático. Ele testa se as consultas fornecem nos resultados esperados, mas não demonstram se o dado obtido foi movido para a raiz.
 
-Um arquivo chamado "matriculas.txt" contém uma relação de números de matrícula e nome de estudantes. Cada linha desse
-arquivo tem este formato:
+Um arquivo chamado "matriculas.txt" contém uma relação de números de matrícula e nome de estudantes. Cada linha desse arquivo tem este formato:
 
 numero,Nome de Uma Pessoa
-Escreva um programa que leia os dados desse arquivo e os armazene em uma árvore de pesquisa binária. Em seguida, seu
-programa deve entrar em um loop. Em cada ciclo do loop o programa apresenta este prompt:
+Escreva um programa que leia os dados desse arquivo e os armazene em uma árvore de pesquisa binária. Em seguida, seu programa deve entrar em um loop. Em cada ciclo do loop o programa apresenta este prompt:
 
 Digite matricula>
-... e aguardar que seja fornecido um número de matrícula pelo teclado. Ao ler a matrícula, deve-se apresentar na tela o
-nome do estudante neste formato:
+... e aguardar que seja fornecido um número de matrícula pelo teclado. Ao ler a matrícula, deve-se apresentar na tela o nome do estudante neste formato:
 
 Estudante: Um Nome de Um Estudante
-Se em vez de uma matrícula for teclado ENTER, o programa deve terminar. Se uma matrícula desconhecida for digitada, seu
-programa deve apresentar esta mensagem:
+Se em vez de uma matrícula for teclado ENTER, o programa deve terminar. Se uma matrícula desconhecida for digitada, seu programa deve apresentar esta mensagem:
 
 Matricula MATRICULA_DIGITADA desconhecida
 Seu programa será testado com diferentes números de consultas.
-
-Arquivo de projeto CLion
-Última atualização: quinta, 10 Mar 2022, 15:07

@@ -192,30 +192,6 @@ Terminal.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/runTerm.dir/build.make CMakeFiles/runTerm.dir/Terminal.cpp.s
 .PHONY : Terminal.cpp.s
 
-interface.o: interface.cpp.o
-.PHONY : interface.o
-
-# target to build an object file
-interface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runTerm.dir/build.make CMakeFiles/runTerm.dir/interface.cpp.o
-.PHONY : interface.cpp.o
-
-interface.i: interface.cpp.i
-.PHONY : interface.i
-
-# target to preprocess a source file
-interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runTerm.dir/build.make CMakeFiles/runTerm.dir/interface.cpp.i
-.PHONY : interface.cpp.i
-
-interface.s: interface.cpp.s
-.PHONY : interface.s
-
-# target to generate assembly for a file
-interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runTerm.dir/build.make CMakeFiles/runTerm.dir/interface.cpp.s
-.PHONY : interface.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -279,9 +255,6 @@ help:
 	@echo "... Terminal.o"
 	@echo "... Terminal.i"
 	@echo "... Terminal.s"
-	@echo "... interface.o"
-	@echo "... interface.i"
-	@echo "... interface.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -8,7 +8,7 @@ include_directories(.)
 add_subdirectory(googletest)
 include_directories(googletest/include googletest)
 
-add_executable(runTerm termtest.cpp Terminal.cpp Terminal.h interface.cpp interface.h)
+add_executable(runTerm termtest.cpp Terminal.cpp Terminal.h)
 
 target_link_libraries(runTerm gtest gtest_main util)
 

@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/anahoog/CLionProjects/projeto3/Terminal.cpp" "CMakeFiles/runTerm.dir/Terminal.cpp.o" "gcc" "CMakeFiles/runTerm.dir/Terminal.cpp.o.d"
-  "/home/anahoog/CLionProjects/projeto3/interface.cpp" "CMakeFiles/runTerm.dir/interface.cpp.o" "gcc" "CMakeFiles/runTerm.dir/interface.cpp.o.d"
   "/home/anahoog/CLionProjects/projeto3/termtest.cpp" "CMakeFiles/runTerm.dir/termtest.cpp.o" "gcc" "CMakeFiles/runTerm.dir/termtest.cpp.o.d"
   )
 
