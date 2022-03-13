@@ -3,47 +3,49 @@
 #include "splay.h"
 
 namespace splay {
-    /*-------------------nodo---------------------*/
+
     template <typename T> Nodo <T> * cria_nodo(const T & algo) {
         Nodo<T> *novo;
         novo = new Nodo<T>;
+
         novo->dado = algo;
         novo->esq = nullptr;
         novo->dir = nullptr;
         novo->pai = nullptr;
-        //arv.raiz(novo);
+
         return novo;
-    }  //ok
+    }
 
-
-    /*-------------------Splay---------------------*/
     template <typename T> Splay <T> cria_splay() {
         Splay<T> arv;
         arv.raiz = nullptr;
+
         return arv;
     }
 
-
     template <typename T> bool splay_vazia (Splay <T> & arv) {
         return arv.raiz == nullptr;
-    } //ok
+    }
 
 
     template <typename T> int altura (Nodo <T> * nodo){
         if (nodo->esq == nullptr && nodo->dir == nullptr) return 0;
 
-        int he = 0, hd = 0;
+        int altura_esq = 0, altura_dir = 0;
 
-        // Calcula do lado esquerdo
-        if (nodo->esq != nullptr) he = 1 + altura(nodo->esq);
+        if (nodo->esq != nullptr) {
+            altura_esq = 1 + altura(nodo->esq);
+        }
 
-        // Calcula do lado direito
-        if (nodo->dir != nullptr) hd = 1 + altura(nodo->dir);
+        if (nodo->dir != nullptr){
+            altura_dir = 1 + altura(nodo->dir);
+        }
 
-        // retorna o que for maior
-        if (he > hd) return he;
-        else return hd;
-    } //ok
+        if (altura_esq > altura_dir){
+            return altura_esq;
+        }
+        return altura_dir;
+    }
 
 
     template <typename T> int fator_balanceamento (Nodo <T> * nodo){
@@ -56,36 +58,32 @@ namespace splay {
 
         if (splay_vazia(arv)) {
             arv.raiz = cria_nodo(algo);
-        }
-        else {
-            Nodo<T> *atual = arv.raiz;
-            bool teste = true;
+        }else {
+            Nodo<T> * atual = arv.raiz;
 
             while (true) {
                 //passo 1: Se o dado procurado for igual ao dado contido no nodo atual, sobrescreve o dado do nodo atual e encerra a inserção
                 if (algo == atual->dado) {
-                    arv.raiz->dado = algo;
+                    atual->dado = algo;
                     return;
                 }
                 if (algo < atual->dado) {
                     if (atual->esq != nullptr) {
                         atual = atual->esq;
-                    }
-                    else {
+                    }else {
                         atual->esq = cria_nodo(algo);
                         atual->esq->pai = atual;
                         move_para_raiz(arv,atual);
                         return;
                     }
-                }
-                else {
+                }else {
                     if (atual->dir != nullptr) {
                         atual = atual->dir;
                     }
                     else {
                         atual->dir = cria_nodo(algo);
                         atual->dir->pai = atual;
-                       move_para_raiz(arv,atual);
+                        move_para_raiz(arv,atual);
                         return;
                     }
 
@@ -114,8 +112,7 @@ namespace splay {
                 dado_atual = dado_atual->dir;
                 zag(dado_atual);
             }
-        }std::cout<<"dado inexistente"<<std::endl;
-
+        }//std::cout<<"dado inexistente"<<std::endl;
     }
 
 
@@ -144,13 +141,13 @@ namespace splay {
 
                     // 2.2 Se for caso zigzag faça a transformação zig e depois zag no nodo
                     else if (testa_zigzag(nodo)) {
-                        zig(nodo->pai);
+                        zig(nodo);
                         zag(nodo);
                     }
 
                     // 2.3 Se for caso zagzig faça a transformação zag e depois zig no nodo
                     else if (testa_zagzig(nodo)) {
-                        zag(nodo->pai);
+                        zag(nodo);
                         zig(nodo);
                     }
 
@@ -171,52 +168,60 @@ namespace splay {
     /*-----------------------ZigZag-----------------------*/
 
     template <typename T> Nodo <T> * zig (Nodo <T> * nodoB){
-        Nodo<T> *nodoA, *sub2=nullptr, *up;
-        nodoA = nodoB->pai;
+        Nodo<T> * nodoA = nodoB->pai;
+        Nodo<T> * sub2=nullptr, * up;
         up = nodoA->pai;
+
+        sub2 = nodoB->dir;
 
         nodoB->pai = up;
         if(up!= nullptr){
-            if (na_esquerda(nodoA)) up->esq = nodoB;
-            else up->dir = nodoB;
-
+            if (na_esquerda(nodoA)) {
+                up->esq = nodoB;
+            }
+            else {
+                up->dir = nodoB;
+            }
         }
 
-        sub2 = nodoB->esq;
+        nodoA->esq = sub2;
 
-        nodoB->esq = nodoA;
+        if (sub2 != nullptr){
+            sub2->pai = nodoA;
+        }
+        nodoB->dir = nodoA;
         nodoA->pai = nodoB;
-
-        nodoA->dir = sub2;
-        if (sub2 != nullptr) sub2->pai = nodoA;
 
         return nodoB;
     }
 
     template <typename T> Nodo<T> * zag (Nodo <T> * nodoA) {
-        Nodo<T> *nodoB, * sub2 = nullptr, * up;
-
-        nodoB = nodoA->pai;
-
+        Nodo<T> * nodoB = nodoA->pai;
+        Nodo<T> * sub2=nullptr, * up;
         up = nodoB->pai;
+
+        sub2 = nodoA->dir;
 
         nodoA->pai = up;
         if(up!= nullptr){
-            if (na_esquerda(nodoB)) up->esq = nodoA;
-            else up->dir = nodoA;
+            if (na_esquerda(nodoB)) {
+                up->esq = nodoA;
+            }
+            else {
+                up->dir = nodoA;
+            }
         }
 
+        nodoB->dir = sub2;
 
-        sub2 = nodoA->esq;
-
-        nodoA->esq = nodoB;
+        if (sub2 != nullptr){
+            sub2->pai = nodoB;
+        }
+        nodoA->dir = nodoB;
         nodoB->pai = nodoA;
 
-        nodoB->dir = sub2;
-        if (sub2 != nullptr) sub2->pai = nodoB;
-
-
         return nodoA;
+
     }
 
     /*--------------------Testes------------------------------*/

@@ -60,26 +60,26 @@ void teste_splay(){
 
 }
 
-struct itens {
+struct dados {
     int matricula;
     string nome;
-    bool operator<(const itens &algo){
+    bool operator<(const dados &algo){
         if(matricula<algo.matricula){
             return true;
         }
     }
 };
 
-bool operator < (const itens & algo, const itens & atual){
+bool operator < (const dados & algo, const dados & atual){
     if(algo.matricula < atual.matricula){
         return true;
     }return false;
 };
 
-itens separa(const string & linha){
+dados separa_str(const string & linha){
 
     string aux;
-    itens varSepara;
+    dados varSepara;
     char sep = ',';
     int pos = linha.find_first_not_of(sep);
 
@@ -96,29 +96,46 @@ itens separa(const string & linha){
     }
     return varSepara;
 }
-bool operator == (const itens & este, const itens & aquele){
-    return este.matricula == aquele.matricula;
+
+bool operator == (const dados & esta, const dados & aquela){
+    return esta.matricula == aquela.matricula;
 };
 
 
 int main() {
 
     //teste_splay();
-
-    ifstream arq ("../matriculas.txt");
+    ifstream arquivo ("../matriculas.txt");
     string linha;
-    itens obj;
+    dados aluno;
 
-    Splay<itens> arv = cria_splay <itens> ();
-    Splay<int> teste = cria_splay<int>();
-    if (!arq.is_open()) {
+    Splay<dados> arv = cria_splay <dados> ();
+
+    if (!arquivo.is_open()) {
         cout<<"arquivo invalido"<< endl;
         return 0;
     }
-    while (getline(arq, linha)) {
-        obj = separa(linha);
-       splay_adiciona(arv,obj);
-        splay_adiciona(teste,obj.matricula);
+
+    while (getline(arquivo, linha)) {
+        aluno = separa_str(linha);
+        splay_adiciona(arv,aluno);
+    }
+    string aux;
+
+    while(true){
+        cout << "Digite matricula: ";
+        getline(cin, aux);
+        if (aux.empty()){
+            break;
+        }
+        dados buscar;
+        buscar.matricula = stoi(aux);
+        auto obtido = splay_acessa_dado(arv,buscar);
+        if(obtido.nome!=""){
+            cout<<"Estudante: "<<obtido.nome<<endl;
+        }else{
+            cout<<"Matricula "<<buscar.matricula<<" desconhecida"<<endl;
+        }
     }
 
 
