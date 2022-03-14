@@ -99,8 +99,8 @@ googletest/clean: googletest/CMakeFiles/gtest.dir/clean
 # Target rules for target CMakeFiles/runTerm.dir
 
 # All Build rule for target.
-CMakeFiles/runTerm.dir/all: googletest/CMakeFiles/gtest_main.dir/all
 CMakeFiles/runTerm.dir/all: googletest/CMakeFiles/gtest.dir/all
+CMakeFiles/runTerm.dir/all: googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/runTerm.dir/build.make CMakeFiles/runTerm.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/runTerm.dir/build.make CMakeFiles/runTerm.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anahoog/CLionProjects/projeto3/cmake-build-debug/CMakeFiles --progress-num=7,8,9 "Built target runTerm"

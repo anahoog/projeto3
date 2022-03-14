@@ -12,8 +12,6 @@ void teste_splay(){
     cout<<"-------------------------------------------------------"<<endl;
     cout<<" "<<endl;
     cout<<"Teste 1: Criação do Nodo:"<<endl;
-    cout<<"Nodo tipo string e dado: A"<<endl;
-
     int aux = 50;
     auto out_nodo = cria_nodo(aux);
 
@@ -230,6 +228,6 @@ int consulta_splay(){
 int main() {
 
     //Para Testar o programa, remover as barras da função teste_splay();
-    teste_splay();
-   // consulta_splay();
+   // teste_splay();
+   consulta_splay();
 }
