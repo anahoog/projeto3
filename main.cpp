@@ -8,52 +8,95 @@ using namespace std;
 
 //Função de Teste do programa
 void teste_splay(){
+
     cout<<"-------------------------------------------------------"<<endl;
     cout<<" "<<endl;
-    cout<<"Teste 1: Criação da Árvore Splay:"<<endl;
+    cout<<"Teste 1: Criação do Nodo:"<<endl;
+    cout<<"Nodo tipo string e dado: A"<<endl;
+
+    int aux = 50;
+    auto out_nodo = cria_nodo(aux);
+
+    cout<<"Novo nodo: "<<out_nodo->dado<<endl;
+    cout<<"Nodo à esquerda:"<<out_nodo->esq<<endl;
+    cout<<"Nodo à direita:"<<out_nodo->dir<<endl;
+    cout<<"Nodo pai:"<<out_nodo->pai<<endl;
+    cout<<" "<<endl;
+
+    cout<<"-------------------------------------------------------"<<endl;
+    cout<<" "<<endl;
+
+    cout<<"Teste 2: Criação da Árvore Splay:"<<endl;
     Splay<int> arv = cria_splay<int>();
     cout<<" "<<endl;
+
     if(splay_vazia(arv)){
         cout<<"* Árvore Criada com Sucesso *"<<endl;
     }else{
         cout<<"* Falha na Criação da Árvore *"<<endl;
     }
     cout<<" "<<endl;
-
     cout<<"-------------------------------------------------------"<<endl;
-
     cout<<" "<<endl;
-    cout<<"Teste 2: Adicionar nodo na Árvore:"<<endl;
-    cout<<"1"<<endl;
-    splay_adiciona(arv,1);
-    cout<<"2"<<endl;
-    splay_adiciona(arv,2);
-    cout<<"3"<<endl;
-    splay_adiciona(arv,3);
-    cout<<"4"<<endl;
-    splay_adiciona(arv,4);
-    cout<<"5"<<endl;
-    splay_adiciona(arv,5);
-    cout<<" "<<endl;
+    cout<<"Teste 3: Adicionar nodo na Árvore:"<<endl;
 
+    splay_adiciona(arv,10);
+    splay_adiciona(arv,20);
+    splay_adiciona(arv,30);
+    splay_adiciona(arv,40);
+    splay_adiciona(arv,50);
+
+    cout<<"10"<<endl;
+    cout<<"20"<<endl;
+    cout<<"30"<<endl;
+    cout<<"40"<<endl;
+    cout<<"50"<<endl;
+    cout<<" "<<endl;
     cout<<"-------------------------------------------------------"<<endl;
-
     cout<<" "<<endl;
-    cout<<"Teste 3: Altura da Árvore:"<<endl;
 
-
-    cout<<" "<<endl;
+    cout<<"Teste 4: Altura da Árvore:"<<endl;
     cout<<"* Altura: "<<altura_arv(arv)<<"* "<<endl;
+
     cout<<" "<<endl;
     cout<<"-------------------------------------------------------"<<endl;
     cout<<" "<<endl;
-    cout<<"Teste 4: Move para Raiz:"<<endl;
 
+    cout<<"Teste 5: Acessa Dado:"<<endl;
+    cout<<"* Raiz atual: "<<arv.raiz->dado<<endl;
 
+    auto nodo = arv.raiz;
+    cout<<"* Nodo esquerdo: "<<nodo->esq->dado<<endl;
+    cout<<"* Nodo direito: "<<nodo->dir->dado<<endl;
+    cout<<"* Nodo pai: "<<nodo->pai<<endl;
     cout<<" "<<endl;
-    cout<<"* raiz: "<<arv.raiz->dado<<"* "<<endl;
+
+    splay_acessa_dado(arv,30);
+    cout<<"* Nova Raiz - Zig: "<<arv.raiz->dado<<endl;
+    cout<<"* Nodo esquerdo: "<<arv.raiz->esq->dado<<endl;
+    cout<<"* Nodo direito: "<<arv.raiz->dir->dado<<endl;
+    cout<<"* Nodo pai: "<<arv.raiz->pai<<endl;
     cout<<" "<<endl;
-    cout<<"-------------------------------------------------------"<<endl;
+
+    splay_acessa_dado(arv,40);
+    cout<<"* Nova Raiz - Zag: "<<arv.raiz->dado<<endl;
+    cout<<"* Nodo esquerdo: "<<arv.raiz->esq->dado<<endl;
+    cout<<"* Nodo direito: "<<arv.raiz->dir->dado<<endl;
+    cout<<"* Nodo pai: "<<arv.raiz->pai<<endl;
+    cout<<" "<<endl;
+
+    splay_acessa_dado(arv,20);
+    cout<<"* Nova Raiz - ZigZig: "<<arv.raiz->dado<<endl;
+    cout<<"* Nodo esquerdo: "<<arv.raiz->esq->dado<<endl;
+    cout<<"* Nodo direito: "<<arv.raiz->dir->dado<<endl;
+    cout<<"* Nodo pai: "<<arv.raiz->pai<<endl;
+    cout<<" "<<endl;
+
+    splay_acessa_dado(arv,40);
+    cout<<"* Nova Raiz - ZagZag: "<<arv.raiz->dado<<endl;
+    cout<<"* Nodo esquerdo: "<<arv.raiz->esq->dado<<endl;
+    cout<<"* Nodo direito: "<<arv.raiz->dir->dado<<endl;
+    cout<<"* Nodo pai: "<<arv.raiz->pai<<endl;
 
 }
 
@@ -90,7 +133,6 @@ dados separa_str(const string & linha){
     }
     return varSepara;
 }
-
 
 //Determinação do operador em relação ao dado "matricula";
 bool operator < (const dados & algo, const dados & atual){
@@ -188,6 +230,6 @@ int consulta_splay(){
 int main() {
 
     //Para Testar o programa, remover as barras da função teste_splay();
-    //teste_splay();
-    consulta_splay();
+    teste_splay();
+   // consulta_splay();
 }

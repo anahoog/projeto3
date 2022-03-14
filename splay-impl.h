@@ -221,10 +221,15 @@ namespace splay {
         //o nodo pai do nodoB recebe o nodo pai do nodoA;
         nodoB->pai = up;
 
+        //se o nodo up não for nullptr
         if(up!= nullptr){
+
+            //verifique se o nodoA está a esquerda do nodo pai;
             if (na_esquerda(nodoA)) {
+                //Se estiver, o nodo a esquerda do nodo superior será o nodoB;
                 up->esq = nodoB;
             }
+            //Senão, ele estará à direita do nodo up;
             else {
                 up->dir = nodoB;
             }
