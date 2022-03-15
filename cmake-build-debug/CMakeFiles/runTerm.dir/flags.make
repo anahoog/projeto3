@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/anahoog/CLionProjects/projeto3/. -isystem /home/anahoog/CLionProjects/projeto3/googletest/include -isystem /home/anahoog/CLionProjects/projeto3/googletest
+CXX_INCLUDES = -I/home/aluno/CLionProjects/final/. -isystem /home/aluno/CLionProjects/final/googletest/include -isystem /home/aluno/CLionProjects/final/googletest
 
 CXX_FLAGS = -g -std=gnu++14
 

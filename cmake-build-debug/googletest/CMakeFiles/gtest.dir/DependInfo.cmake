@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/anahoog/CLionProjects/projeto3/googletest/src/gtest-all.cc" "googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" "gcc" "googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d"
+  "/home/aluno/CLionProjects/final/googletest/src/gtest-all.cc" "googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" "gcc" "googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d"
   )
 
 # Targets to which this target links.

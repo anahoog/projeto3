@@ -57,10 +57,10 @@ RM = /snap/clion/180/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anahoog/CLionProjects/projeto3
+CMAKE_SOURCE_DIR = /home/aluno/CLionProjects/final
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anahoog/CLionProjects/projeto3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/aluno/CLionProjects/final/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anahoog/CLionProjects/projeto3/cmake-build-debug/CMakeFiles /home/anahoog/CLionProjects/projeto3/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aluno/CLionProjects/final/cmake-build-debug/CMakeFiles /home/aluno/CLionProjects/final/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anahoog/CLionProjects/projeto3/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aluno/CLionProjects/final/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

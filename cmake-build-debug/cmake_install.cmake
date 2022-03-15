@@ -1,4 +1,4 @@
-# Install script for directory: /home/anahoog/CLionProjects/projeto3
+# Install script for directory: /home/aluno/CLionProjects/final
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/cmake_install.cmake")
+  include("/home/aluno/CLionProjects/final/cmake-build-debug/googletest/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/anahoog/CLionProjects/projeto3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/aluno/CLionProjects/final/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

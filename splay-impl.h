@@ -67,7 +67,7 @@ namespace splay {
         if (splay_vazia(arv)) {
             arv.raiz = cria_nodo(algo);
         }
-        //Caso a arvore não esteja vazia, usa-se a raiz como referência para localizar a posição inicial;
+            //Caso a arvore não esteja vazia, usa-se a raiz como referência para localizar a posição inicial;
         else {
             Nodo<T> * atual = arv.raiz;
 
@@ -84,8 +84,8 @@ namespace splay {
                     if (atual->esq != nullptr) {
                         atual = atual->esq;
                     }
-                    //Caso o nodo à esquerda do nodo atual esteja vazio, cria-se um nodo com o dado fornecido e adiciona à esquerda
-                    //do nodo atual e insere o nodo pai com o valor do nodo atual;
+                        //Caso o nodo à esquerda do nodo atual esteja vazio, cria-se um nodo com o dado fornecido e adiciona à esquerda
+                        //do nodo atual e insere o nodo pai com o valor do nodo atual;
                     else {
                         atual->esq = cria_nodo(algo);
                         atual->esq->pai = atual;
@@ -96,9 +96,9 @@ namespace splay {
                         return;
                     }
                 }
-                //Caso o dado não seja igual ou menor que o dado do nodo atual, ele é maior que o dado do nodo atual.
-                //Logo, procura-se o nodo que possua o nodo à direita vazia para então adicionar o dado em um novo nodo e
-                // este ser o nodo à direita do nodo atual.
+                    //Caso o dado não seja igual ou menor que o dado do nodo atual, ele é maior que o dado do nodo atual.
+                    //Logo, procura-se o nodo que possua o nodo à direita vazia para então adicionar o dado em um novo nodo e
+                    // este ser o nodo à direita do nodo atual.
                 else {
                     if (atual->dir != nullptr) {
                         atual = atual->dir;
@@ -120,19 +120,27 @@ namespace splay {
 
         Nodo <T> * dado_atual = arv.raiz;
 
-        while (dado_atual != nullptr) {
+        try {
 
-            if (dado_atual->dado == algo) {
-                move_para_raiz(arv,dado_atual);
-                return dado_atual->dado;
-            }
-            if (algo < dado_atual->dado) {
-                dado_atual = dado_atual->esq;
-            }
-            else {
-                dado_atual = dado_atual->dir;
+            while (dado_atual != nullptr) {
+
+                if (dado_atual->dado == algo) {
+                    move_para_raiz(arv, dado_atual);
+                    return dado_atual->dado;
+                }
+                if (algo < dado_atual->dado) {
+                    dado_atual = dado_atual->esq;
+                } else {
+                    dado_atual = dado_atual->dir;
+                }
             }
         }
+        catch(...){
+            throw std::exception();
+
+            return algo;
+        }
+
     }
 
     //Função move_para_raiz: Recebe como parâmetro a avore que terá a raiz atualizada e qual nodo será utilizado;
@@ -150,52 +158,52 @@ namespace splay {
                     zig(nodo);
                 }
 
-                //Se o nodo estiver à direita, chame a função zag;
+                    //Se o nodo estiver à direita, chame a função zag;
                 else {
                     zag(nodo);
                 }
             }
 
-            // Se ele não for o nodo raiz
+                // Se ele não for o nodo raiz
             else{
-                    //Chame a função testa_zigzig indicando que o nodo e o pai do nodo estão à esquerda
-                    if (testa_zigzig(nodo)) {
-                        //faça a transformação zig no nodo pai;
-                        zig(nodo->pai);
+                //Chame a função testa_zigzig indicando que o nodo e o pai do nodo estão à esquerda
+                if (testa_zigzig(nodo)) {
+                    //faça a transformação zig no nodo pai;
+                    zig(nodo->pai);
 
-                        //Chame a função zig no nodo atual;
-                        zig(nodo);
-                    }
+                    //Chame a função zig no nodo atual;
+                    zig(nodo);
+                }
 
                     //Se não for zigzig, chame a função testa_zigzag, indicando que o nodo está à esquerda e o pai do nodo à direita;
-                    else if (testa_zigzag(nodo)) {
+                else if (testa_zigzag(nodo)) {
 
-                        //Faça zig no nodo;
-                        zig(nodo);
+                    //Faça zig no nodo;
+                    zig(nodo);
 
-                        //Faça zag no nodo;
-                        zag(nodo);
-                    }
+                    //Faça zag no nodo;
+                    zag(nodo);
+                }
 
                     //Se não for zigzag, chame a função testa_zagzig, indicando que o nodo está à direita e o pai do nodo à esquerda;
-                    else if (testa_zagzig(nodo)) {
+                else if (testa_zagzig(nodo)) {
 
-                        //Faça zag no nodo;
-                        zag(nodo);
+                    //Faça zag no nodo;
+                    zag(nodo);
 
-                        //Faça zig no nodo;
-                        zig(nodo);
-                    }
+                    //Faça zig no nodo;
+                    zig(nodo);
+                }
 
                     //Chame a função testa_zagzag indicando que o nodo e o pai do nodo estão à direita
-                    else if (testa_zagzag(nodo)) {
+                else if (testa_zagzag(nodo)) {
 
-                        //faça a transformação zag no nodo pai;
-                        zag(nodo->pai);
+                    //faça a transformação zag no nodo pai;
+                    zag(nodo->pai);
 
-                        //Chame a função zag no nodo atual;
-                        zag(nodo);
-                    }
+                    //Chame a função zag no nodo atual;
+                    zag(nodo);
+                }
 
             }
         }
@@ -229,7 +237,7 @@ namespace splay {
                 //Se estiver, o nodo a esquerda do nodo superior será o nodoB;
                 up->esq = nodoB;
             }
-            //Senão, ele estará à direita do nodo up;
+                //Senão, ele estará à direita do nodo up;
             else {
                 up->dir = nodoB;
             }

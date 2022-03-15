@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/anahoog/CLionProjects/projeto3/googletest/src/gtest_main.cc" "googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o" "gcc" "googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d"
+  "/home/aluno/CLionProjects/final/googletest/src/gtest_main.cc" "googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o" "gcc" "googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/aluno/CLionProjects/final/cmake-build-debug/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

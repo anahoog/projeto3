@@ -2,6 +2,7 @@
 #include <string>
 #include "splay.h"
 #include <fstream>
+#include <list>
 
 using namespace splay;
 using namespace std;
@@ -162,7 +163,7 @@ int consulta_splay(){
     //Criação de uma arvore splay do tipo dados, uma estrutura com as informações de matricula e nome de aluno;
     Splay<dados> arv = cria_splay <dados> ();
 
-   //Variável utilizada para armazenar a linha do arqivo;
+    //Variável utilizada para armazenar a linha do arqivo;
     string linha;
 
     //Variável do tipo "dados"(matricula e nome) que receberá o retorno da função "separa_str";
@@ -215,19 +216,78 @@ int consulta_splay(){
         if(obtido.nome!=""){
             cout<<"Estudante: "<<obtido.nome<<endl;
         }
-        /*Requisito do exercicio:
-        *Se uma matrícula desconhecida for digitada, seu programa deve apresentar esta mensagem:
-        *Matricula MATRICULA_DIGITADA desconhecida
-        */
+            /*Requisito do exercicio:
+            *Se uma matrícula desconhecida for digitada, seu programa deve apresentar esta mensagem:
+            *Matricula MATRICULA_DIGITADA desconhecida
+            */
         else{
             cout<<"Matricula "<<buscar.matricula<<" desconhecida"<<endl;
         }
     }
 }
 
+int testa_arvore(){
+
+    list<dados> lista_auxiliar;
+    //Inicialmente o programa carrega o arquivo utilizado para consulta
+    ifstream arquivo ("../matriculas.txt");
+
+    //Caso não seja possível abrir o arquivo, retorna mensagem de erro e encerra o programa.
+    if (!arquivo.is_open()) {
+        cout<<"arquivo invalido"<< endl;
+        return 0;
+    }
+
+    //Criação de uma arvore splay do tipo dados, uma estrutura com as informações de matricula e nome de aluno;
+    Splay<dados> arv = cria_splay <dados> ();
+
+    //Variável utilizada para armazenar a linha do arqivo;
+    string linha;
+
+    //Variável do tipo "dados"(matricula e nome) que receberá o retorno da função "separa_str";
+    dados aluno;
+
+    //Enquanto for possível obter uma linha do arquivo, chama-se a função "separa_str" que retornará a matricula e o nome do aluno.
+    //O resultado da função separa_str é salvo na variável "aluno" e em seguia, é chamada a função "splay_adiciona", no qual é necessário
+    // informar qual arvore será utilizada e qual dado será armazenado;
+    while (getline(arquivo, linha)) {
+        aluno = separa_str(linha);
+        splay_adiciona(arv,aluno);
+        lista_auxiliar.push_back(aluno);
+    }
+
+    //lista_auxiliar.sort();
+    while(!lista_auxiliar.empty()){
+
+        auto buscar = lista_auxiliar.front();
+        lista_auxiliar.pop_front();
+        dados obtido = splay_acessa_dado(arv,buscar);
+
+        if(obtido.nome!=""){
+            cout<<"Estudante: "<<obtido.nome<<endl;
+            cout<<"Raiz: "<<arv.raiz->dado.nome<<endl;
+        }
+
+        else{
+            cout<<"Matricula "<<buscar.matricula<<" desconhecida"<<endl;
+        }
+    }
+
+}
+
+
 int main() {
 
     //Para Testar o programa, remover as barras da função teste_splay();
-   // teste_splay();
-   consulta_splay();
+
+    //auto teste
+    // teste_splay();
+
+    //Programa Principal//
+    consulta_splay();
+
+    //testa todos os nodos da arvore;
+    //testa_arvore();
+
+
 }

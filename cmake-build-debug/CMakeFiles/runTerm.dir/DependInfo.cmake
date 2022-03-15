@@ -8,14 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/anahoog/CLionProjects/projeto3/Terminal.cpp" "CMakeFiles/runTerm.dir/Terminal.cpp.o" "gcc" "CMakeFiles/runTerm.dir/Terminal.cpp.o.d"
-  "/home/anahoog/CLionProjects/projeto3/termtest.cpp" "CMakeFiles/runTerm.dir/termtest.cpp.o" "gcc" "CMakeFiles/runTerm.dir/termtest.cpp.o.d"
+  "/home/aluno/CLionProjects/final/Terminal.cpp" "CMakeFiles/runTerm.dir/Terminal.cpp.o" "gcc" "CMakeFiles/runTerm.dir/Terminal.cpp.o.d"
+  "/home/aluno/CLionProjects/final/termtest.cpp" "CMakeFiles/runTerm.dir/termtest.cpp.o" "gcc" "CMakeFiles/runTerm.dir/termtest.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "/home/anahoog/CLionProjects/projeto3/cmake-build-debug/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/home/aluno/CLionProjects/final/cmake-build-debug/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/aluno/CLionProjects/final/cmake-build-debug/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
